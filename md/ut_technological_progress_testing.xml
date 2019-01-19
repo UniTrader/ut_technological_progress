@@ -6,12 +6,12 @@
         <create_group groupname="$Testships"/>
       </actions>
       <cues>
-        <cue name="SpawnTestShips" checkinterval="5s">
+        <cue name="SpawnTestShips" checktime="10s" checkinterval="5s">
           <conditions>
             <cue_is_complete cue="md.Setup.Start"/>
           </conditions>
           <actions>
-            <create_ship groupname="$Testships" name="$Testship" zone="player.zone" macro="macro.ship_arg_xl_carrier_01_a_macro" >
+            <create_ship groupname="$Testships" name="$Testship" zone="player.entity.zone" macro="macro.ship_arg_xl_carrier_01_a_macro" >
               <owner exact="$spawnfleetfaction"/>
               <pilot macro="character_boron_generic_01_macro">
                 <owner exact="if $spawnfleetisgreen then faction.player else $spawnfleetfaction"/>
