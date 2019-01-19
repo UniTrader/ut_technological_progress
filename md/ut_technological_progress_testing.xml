@@ -34,7 +34,15 @@
             <event_object_docked_at group="$Testships"/>
           </conditions>
           <actions>
-            <generate_loadout macro="$Testship.macro" level="1" result="$loadout"/>
+            <!--generate_loadout macro="$Testship.macro" result="$loadout"/-->
+            <create_loadout result="$loadout">
+              <macros>
+                <engine macro="engine_arg_xl_travel_01_mk1_macro"/>
+                <shield macro="shield_arg_xl_standard_01_mk1_macro"/>
+                <shield macro="shield_arg_m_standard_02_mk2_macro"/>
+                <turret macro="turret_arg_m_beam_02_mk1_macro"/>
+              </macros>
+            </create_loadout>
             <apply_loadout object="$Testship" loadout="$loadout.{1}"/>
           </actions>
         </cue>
