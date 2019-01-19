@@ -34,7 +34,7 @@
             <event_object_docked_at group="$Testships"/>
           </conditions>
           <actions>
-            <generate_loadout macro="$Testship.macro" level="1" result="$loadout"/>
+            <generate_loadout macro="$Testship.macro" level="1" result="$loadout.{1}"/>
             <apply_loadout object="$Testship" loadout="$loadout"/>
           </actions>
         </cue>
