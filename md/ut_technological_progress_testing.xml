@@ -31,7 +31,7 @@
         </cue>
         <cue name="ChangeTestShips">
           <conditions>
-            <event_object_docked_at group="$Testships"/>
+            <event_player_deactivated_weapongroup weapongroup="1"/>
           </conditions>
           <actions>
             <!--generate_loadout macro="$Testship.macro" result="$loadout"/-->
