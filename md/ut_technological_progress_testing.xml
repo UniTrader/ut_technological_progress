@@ -6,12 +6,9 @@
         <create_group groupname="$Testships"/>
       </actions>
       <cues>
-        <cue name="SpawnTestShips">
+        <cue name="SpawnTestShips" checkinterval="5s">
           <conditions>
-            <check_any>
-              <event_game_loaded/>
-              <event_cue_completed cue="md.Setup.Start"/>
-            </check_any>
+            <cue_is_complete cue="md.Setup.Start"/>
           </conditions>
           <actions>
             <create_ship groupname="$Testships" name="$Testship" zone="player.zone" macro="macro.ship_arg_xl_carrier_01_a_macro" >
