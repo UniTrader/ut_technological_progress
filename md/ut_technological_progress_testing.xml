@@ -12,9 +12,9 @@
           </conditions>
           <actions>
             <create_ship groupname="$Testships" name="$Testship" zone="player.entity.zone" macro="macro.ship_arg_xl_carrier_01_a_macro" >
-              <owner exact="$spawnfleetfaction"/>
+              <owner exact="faction.player"/>
               <pilot macro="character_boron_generic_01_macro">
-                <owner exact="if $spawnfleetisgreen then faction.player else $spawnfleetfaction"/>
+                <owner exact=" faction.player"/>
                 <skills>
                   <skill type="boarding" exact="5"/>
                   <skill type="engineering" exact="5"/>
