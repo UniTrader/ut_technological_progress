@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mdscript name="UT_CAC_Object_Name_Managment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://utnas/~unitrader/XRebirthxsds/md.xsd">
+  <cues>
+    <cue name="Init">
+      <actions>
+        <create_group groupname="$Testships"/>
+      </actions>
+      <cues>
+        <cue name="SpawnTestShips">
+          <conditions>
+            <check_any>
+              <cue_is_complete cue="md.Setup.Start"/>
+              <event_cue_completed cue="md.Setup.Start"/>
+            </check_any>
+          </conditions>
+          <actions>
+            <create_ship groupname="$Testships" name="$Testship" zone="player.zone" macro="macro.ship_arg_xl_carrier_01_a_macro" >
+              <owner exact="$spawnfleetfaction"/>
+              <pilot macro="character_boron_generic_01_macro">
+                <owner exact="if $spawnfleetisgreen then faction.player else $spawnfleetfaction"/>
+                <skills>
+                  <skill type="boarding" exact="5"/>
+                  <skill type="engineering" exact="5"/>
+                  <skill type="management" exact="5"/>
+                  <skill type="morale" exact="5"/>
+                </skills>
+              </pilot>
+              <loadout>
+                <level exact="0"/>
+              </loadout>
+            </create_ship>
+            
+          </actions>
+        </cue>
+        <cue name="ChangeTestShips">
+          <conditions>
+            <event_object_docked_at group="$Testships"/>
+          </conditions>
+          <actions>
+            <generate_loadout macro="$Testship.macro" level="1" result="$loadout"/>
+            <apply_loadout object="$Testship" loadout="$loadout"/>
+          </actions>
+        </cue>
+      </cues>
+    </cue>
+  </cues>
+</mdscript>
