@@ -9,7 +9,7 @@
         <cue name="SpawnTestShips">
           <conditions>
             <check_any>
-              <cue_is_complete cue="md.Setup.Start"/>
+              <event_game_loaded/>
               <event_cue_completed cue="md.Setup.Start"/>
             </check_any>
           </conditions>
