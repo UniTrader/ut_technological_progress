@@ -43,6 +43,7 @@
                 <turret macro="turret_arg_m_beam_02_mk1_macro"/>
               </macros>
             </create_loadout>
+            <debug_text filter="general" text="$loadout"/>
             <apply_loadout object="$Testship" loadout="$loadout"/>
           </actions>
         </cue>
