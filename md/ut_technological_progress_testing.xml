@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<mdscript name="UT_Technological_Progress_Test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://utnas/~unitrader/XRebirthxsds/md.xsd">
+<mdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="UT_Technological_Progress_Test" xsi:noNamespaceSchemaLocation="http://utnas/~unitrader/XRebirthxsds/md.xsd">
   <cues>
     <cue name="Init">
       <actions>
@@ -11,7 +11,7 @@
             <cue_is_complete cue="md.Setup.Start"/>
           </conditions>
           <actions>
-            <create_ship groupname="$Testships" name="$Testship" zone="player.entity.zone" macro="macro.ship_arg_xl_carrier_01_a_macro" >
+            <create_ship groupname="$Testships" name="$Testship" zone="player.entity.zone" macro="macro.ship_arg_xl_carrier_01_a_macro">
               <owner exact="faction.player"/>
               <pilot macro="character_boron_generic_01_macro">
                 <owner exact=" faction.player"/>
@@ -26,37 +26,52 @@
                 <level exact="0"/>
               </loadout>
             </create_ship>
-            
           </actions>
         </cue>
-        <cue name="ChangeTestShips">
+        <cue name="ChangeTestShips2" instantiate="true">
           <conditions>
-            <event_player_deactivated_weapongroup weapongroup="1"/>
+            <event_player_activated_weapongroup weapongroup="2"/>
           </conditions>
           <actions>
-            <!--generate_loadout macro="$Testship.macro" result="$loadout"/-->
             <create_loadout result="$loadout">
               <macros>
-                <engine macro="engine_arg_xl_travel_01_mk1_macro"/>
-                <shield macro="shield_arg_xl_standard_01_mk1_macro"/>
-                <shield macro="shield_arg_m_standard_02_mk2_macro"/>
-                <turret macro="turret_arg_m_beam_02_mk1_macro"/>
-              </macros>
-            </create_loadout>
-            <debug_text filter="general" text="$loadout"/>
-                    <create_loadout result="$loadout">
-                    <macros>
-                      <engine macro="engine_arg_s_combat_01_mk3_macro" path="../con_engine_01"/>
-                      <engine macro="engine_arg_s_combat_01_mk3_macro" path="../con_engine_02"/>
-                      <!--weapon macro="weapon_gen_s_gatling_01_mk2_macro" path="../con_primaryweapon_01" optional="1"/>
+                <engine macro="engine_arg_s_combat_01_mk3_macro" path="../con_engine_01"/>
+                <engine macro="engine_arg_s_combat_01_mk3_macro" path="../con_engine_02"/>
+                <engine macro="engine_arg_xl_travel_01_mk1_macro" path="../con_engine_01"/>
+                <engine macro="engine_arg_xl_travel_01_mk1_macro" path="../con_engine_02"/>
+                <!--weapon macro="weapon_gen_s_gatling_01_mk2_macro" path="../con_primaryweapon_01" optional="1"/>
                       <weapon macro="weapon_gen_s_gatling_01_mk2_macro" path="../con_primaryweapon_02" optional="1"/>
                       <shield macro="shield_arg_s_standard_01_mk2_macro" path="../con_shield_01" optional="1"/>
                     </macros>
                     <virtualmacros>
                       <thruster macro="thruster_gen_s_allround_01_mk3_macro"/>
                     </virtualmacros-->
+              </macros>
+            </create_loadout>
+            <debug_text filter="general" text="$loadout"/>
+            <apply_loadout object="$Testship" loadout="$loadout"/>
+          </actions>
+        </cue>
+        <cue name="ChangeTestShips3" instantiate="true">
+          <conditions>
+            <event_player_activated_weapongroup weapongroup="3"/>
+          </conditions>
+          <actions>
+            <create_loadout result="$loadout">
+              <macros>
+                <engine macro="engine_arg_xl_travel_01_mk1_macro" path="../con_engine_01"/>
+                <engine macro="engine_arg_xl_travel_01_mk1_macro" path="../con_engine_02"/>
+                <engine macro="engine_arg_s_combat_01_mk3_macro" path="../con_engine_01"/>
+                <engine macro="engine_arg_s_combat_01_mk3_macro" path="../con_engine_02"/>
+                <!--weapon macro="weapon_gen_s_gatling_01_mk2_macro" path="../con_primaryweapon_01" optional="1"/>
+                      <weapon macro="weapon_gen_s_gatling_01_mk2_macro" path="../con_primaryweapon_02" optional="1"/>
+                      <shield macro="shield_arg_s_standard_01_mk2_macro" path="../con_shield_01" optional="1"/>
                     </macros>
-                  </create_loadout>
+                    <virtualmacros>
+                      <thruster macro="thruster_gen_s_allround_01_mk3_macro"/>
+                    </virtualmacros-->
+              </macros>
+            </create_loadout>
             <debug_text filter="general" text="$loadout"/>
             <apply_loadout object="$Testship" loadout="$loadout"/>
           </actions>
