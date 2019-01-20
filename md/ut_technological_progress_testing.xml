@@ -2,9 +2,6 @@
 <mdscript name="UT_Technological_Progress_Test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://utnas/~unitrader/XRebirthxsds/md.xsd">
   <cues>
     <cue name="Init">
-      <conditions>
-        <count_stations checkoperational="false" max="5">
-          <match_child class
       <actions>
         <create_group groupname="$Testships"/>
       </actions>
