@@ -102,7 +102,7 @@
     <level>99</level>
     <level>100</level>
   </levels>
-  <technology faction="arg" size="m" type="gatling" level_min="1" level_max="100">
+  <technology faction="arg" size="m" type="gatling" level_min="1" level_max="1">
     <base_stats>
       <turret>
         <component ref="turret_arg_m_gatling_01_mk1"/>
