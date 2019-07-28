@@ -38,7 +38,20 @@
                 </xsl:attribute>
               </component>
               <properties>
-                <identification unique="0" name="{./base_stats/turret/properties/identification/@name}" basename="{./base_stats/turret/properties/identification/@basename}" shortname="{./base_stats/turret/properties/identification/@shortname}" makerrace="{./base_stats/turret/properties/identification/@makerrace}" description="{./base_stats/turret/properties/identification/@description}"/>
+                <identification unique="0" name="{./base_stats/turret/properties/identification/@name}" basename="{./base_stats/turret/properties/identification/@basename}" shortname="{./base_stats/turret/properties/identification/@shortname}" makerrace="{./base_stats/turret/properties/identification/@makerrace}" description="{./base_stats/turret/properties/identification/@description}">
+              <!-- Temp Placeholder Name for proper Testing -->
+              <xsl:attribute name="name">
+                <xsl:text>ut_tech_gen_turret_</xsl:text>
+                <xsl:value-of select="./@faction"/>
+                <xsl:text>_</xsl:text>
+                <xsl:value-of select="./@size"/>
+                <xsl:text>_</xsl:text>
+                <xsl:value-of select="./@type"/>
+                <xsl:text>_T</xsl:text>
+                <xsl:number value="$level" format="001"/>
+                <xsl:text>_macro</xsl:text>
+              </xsl:attribute>
+                </identification>
                 <bullet>
                   <xsl:attribute name="class">
                     <xsl:text>ut_tech_gen_turret_bullet_</xsl:text>
