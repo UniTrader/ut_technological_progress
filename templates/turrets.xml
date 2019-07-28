@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<technologies class="turret">
+  <levels comment="needed to iterate through all possible levels. to scale further add Levels as needed here.">
+    <level>1</level>
+    <level>2</level>
+    <level>3</level>
+    <level>4</level>
+    <level>5</level>
+    <level>6</level>
+    <level>7</level>
+    <level>8</level>
+    <level>9</level>
+    <level>10</level>
+    <level>11</level>
+    <level>12</level>
+    <level>13</level>
+    <level>14</level>
+    <level>15</level>
+    <level>16</level>
+    <level>17</level>
+    <level>18</level>
+    <level>19</level>
+    <level>20</level>
+    <level>21</level>
+    <level>22</level>
+    <level>23</level>
+    <level>24</level>
+    <level>25</level>
+    <level>26</level>
+    <level>27</level>
+    <level>28</level>
+    <level>29</level>
+    <level>30</level>
+    <level>31</level>
+    <level>32</level>
+    <level>33</level>
+    <level>34</level>
+    <level>35</level>
+    <level>36</level>
+    <level>37</level>
+    <level>38</level>
+    <level>39</level>
+    <level>40</level>
+    <level>41</level>
+    <level>42</level>
+    <level>43</level>
+    <level>44</level>
+    <level>45</level>
+    <level>46</level>
+    <level>47</level>
+    <level>48</level>
+    <level>49</level>
+    <level>50</level>
+    <level>51</level>
+    <level>52</level>
+    <level>53</level>
+    <level>54</level>
+    <level>55</level>
+    <level>56</level>
+    <level>57</level>
+    <level>58</level>
+    <level>59</level>
+    <level>60</level>
+    <level>61</level>
+    <level>62</level>
+    <level>63</level>
+    <level>64</level>
+    <level>65</level>
+    <level>66</level>
+    <level>67</level>
+    <level>68</level>
+    <level>69</level>
+    <level>70</level>
+    <level>71</level>
+    <level>72</level>
+    <level>73</level>
+    <level>74</level>
+    <level>75</level>
+    <level>76</level>
+    <level>77</level>
+    <level>78</level>
+    <level>79</level>
+    <level>80</level>
+    <level>81</level>
+    <level>82</level>
+    <level>83</level>
+    <level>84</level>
+    <level>85</level>
+    <level>86</level>
+    <level>87</level>
+    <level>88</level>
+    <level>89</level>
+    <level>90</level>
+    <level>91</level>
+    <level>92</level>
+    <level>93</level>
+    <level>94</level>
+    <level>95</level>
+    <level>96</level>
+    <level>97</level>
+    <level>98</level>
+    <level>99</level>
+    <level>100</level>
+  </levels>
+  <technology faction="arg" size="m" type="gatling" level_min="1" level_max="100">
+    <base_stats>
+      <turret>
+        <component ref="turret_arg_m_gatling_01_mk1"/>
+        <properties>
+          <identification basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon" description="{20105,4082}"/>
+          <rotationspeed max="90"/>
+          <reload rate="1" time="1"/>
+          <hull threshold="0.2" integrated="1"/>
+        </properties>
+      </turret>
+      <bullet>
+        <component ref="bullet_gen_m_gatling_01_mk1"/>
+        <properties>
+          <ammunition value="21" reload="1"/>
+          <bullet speed="1920" lifetime="2.5" amount="1" barrelamount="1" icon="weapon_gatling_mk1" timediff="0.025" angle="0.40" maxhits="2" ricochet="0.01" restitution="0.3" scale="0" attach="0"/>
+          <heat value="60"/>
+          <reload rate="7"/>
+          <damage value="12" repair="0"/>
+          <effects>
+            <impact ref="impact_gen_m_gatling_01_mk1"/>
+            <launch ref="muzzle_gen_m_gatling_01_mk1"/>
+          </effects>
+          <weapon system="weapon_standard"/>
+        </properties>
+      </bullet>
+    </base_stats>
+    <progression>
+      <turret>
+        <properties>
+          <rotationspeed max="1.01"/>
+        </properties>
+      </turret>
+      <bullet>
+        <properties>
+          <bullet speed="1.02" lifetime="0.99" angle="0.99"/>
+          <heat value="0.99"/>
+          <reload rate="1.01"/>
+          <damage value="1.01"/>
+        </properties>
+      </bullet>
+    </progression>
+  </technology>
+</technologies>
+<!--
+<macros>
+  <macro name="turret_arg_m_gatling_01_mk1_macro" class="turret" alias="turret_arg_m_gatling_02_mk1_macro">
+    <component ref="turret_arg_m_gatling_01_mk1" />
+    <properties>
+      <identification name="{20105,4084}" basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon" description="{20105,4082}" mk="1" />
+      <bullet class="bullet_gen_turret_m_gatling_01_mk1_macro" />
+      <rotationspeed max="180" />
+      <reload rate="1" time="1" />
+      <hull threshold="0.2" integrated="1" />
+    </properties>
+  </macro>
+  <macro name="bullet_gen_m_gatling_01_mk1_macro" class="bullet">
+    <component ref="bullet_gen_m_gatling_01_mk1" />
+    <properties>
+      <ammunition value="21" reload="1" />
+      <bullet speed="1920" lifetime="2.5" amount="1" barrelamount="1" icon="weapon_gatling_mk1" timediff="0.025" angle="0.25" maxhits="2" ricochet="0.01" restitution="0.3" scale="0" attach="0" />
+      <heat value="43" />
+      <reload rate="14" />
+      <damage value="23" repair="0" />
+      <effects>
+        <impact ref="impact_gen_m_gatling_01_mk1" />
+        <launch ref="muzzle_gen_m_gatling_01_mk1" />
+      </effects>
+      <weapon system="weapon_standard" />
+    </properties>
+  </macro>
+</macros>-->
