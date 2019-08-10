@@ -12,7 +12,9 @@
           </conditions>
           <actions>
         <do_all exact="100" counter="$i">
-          <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" macros="[macro.{'ut_tech_gen_turret_arg_m_gatling_T' + if $i gt 99 then '' else if $i gt 9 then '0' else '00' + $i + '_macro'}]" repeat="true"/>
+          <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" macros="[macro.{'ut_tech_gen_turret_arg_m_gatling_T' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}]" repeat="true"/>
+          <debug_text filter="general" text="$loadout"/>
+          <debug_text filter="general" text="$loadout.wares.list"/>
           <create_ship name="$Testship" zone="player.zone" macro="macro.ship_arg_xl_carrier_01_b_macro">
             <owner exact="faction.player"/>
             <pilot macro="character_boron_generic_01_macro">
