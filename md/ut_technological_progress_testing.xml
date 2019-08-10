@@ -26,7 +26,7 @@
                 <skill type="morale" exact="15"/>
               </skills>
             </pilot>
-            <loadout loadout="$loadout.{1}">
+            <loadout loadout="$loadout">
               <level exact="1"/>
             </loadout>
             <safepos object="player.container" radius="5km"/>
