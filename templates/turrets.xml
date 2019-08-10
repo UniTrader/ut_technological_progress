@@ -102,46 +102,42 @@
     <level>99</level>
     <level>100</level>
   </levels>
-  <technology class="turret" faction="arg" size="m" type="gatling" level_min="2" level_max="3">
-    <base_stats>
-      <component ref="turret_arg_m_gatling_01_mk1"/>
-      <properties>
-        <identification basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon" description="{20105,4082}"/>
-        <rotationspeed max="90"/>
-        <reload rate="1" time="1"/>
-        <hull threshold="0.2" integrated="1"/>
-      </properties>
-    </base_stats>
-    <progression>
-      <properties>
-        <rotationspeed max="1.01"/>
-      </properties>
-    </progression>
+  <technology class="turret" faction="arg" size="m" type="gatling" level_min="1" level_max="100">
+    <component ref="turret_arg_m_gatling_01_mk1"/>
+    <properties>
+      <identification basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon" description="{20105,4082}"/>
+      <bullet>
+        <prefix_parts class="bullet" faction="arg" size="m" type="gatling"/>
+      </bullet>
+      <rotationspeed max="90">
+        <progression max="1.01"/>
+      </rotationspeed>
+      <reload rate="1" time="1"/>
+      <hull threshold="0.2" integrated="1"/>
+    </properties>
   </technology>
-  <technology class="bullet" faction="arg" size="m" type="gatling" level_min="2" level_max="3">
-    <base_stats>
-      <component ref="bullet_gen_m_gatling_01_mk1"/>
-      <properties>
-        <ammunition value="21" reload="1"/>
-        <bullet speed="1920" lifetime="2.5" amount="1" barrelamount="1" icon="weapon_gatling_mk1" timediff="0.025" angle="0.40" maxhits="2" ricochet="0.01" restitution="0.3" scale="0" attach="0"/>
-        <heat value="60"/>
-        <reload rate="7"/>
-        <damage value="12" repair="0"/>
-        <effects>
-          <impact ref="impact_gen_m_gatling_01_mk1"/>
-          <launch ref="muzzle_gen_m_gatling_01_mk1"/>
-        </effects>
-        <weapon system="weapon_standard"/>
-      </properties>
-    </base_stats>
-    <progression>
-      <properties>
-        <bullet speed="1.02" lifetime="0.99" angle="0.99"/>
-        <heat value="0.99"/>
-        <reload rate="1.01"/>
-        <damage value="1.01"/>
-      </properties>
-    </progression>
+  <technology class="bullet" faction="arg" size="m" type="gatling" level_min="1" level_max="100">
+    <component ref="bullet_gen_m_gatling_01_mk1"/>
+    <properties>
+      <ammunition value="21" reload="1"/>
+      <bullet speed="1920" lifetime="2.5" amount="1" barrelamount="1" icon="weapon_gatling_mk1" timediff="0.025" angle="0.40" maxhits="2" ricochet="0.01" restitution="0.3" scale="0" attach="0">
+        <progression speed="1.02" lifetime="0.99" angle="0.99"/>
+      </bullet>
+      <heat value="60">
+        <progression value="0.99"/>
+      </heat>
+      <reload rate="7">
+        <progression rate="1.01"/>
+      </reload>
+      <damage value="12" repair="0">
+        <progression value="1.01"/>
+      </damage>
+      <effects>
+        <impact ref="impact_gen_m_gatling_01_mk1"/>
+        <launch ref="muzzle_gen_m_gatling_01_mk1"/>
+      </effects>
+      <weapon system="weapon_standard"/>
+    </properties>
   </technology>
 </technologies>
 <!--
