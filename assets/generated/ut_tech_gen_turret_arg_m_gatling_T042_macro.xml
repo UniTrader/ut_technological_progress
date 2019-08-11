@@ -6,7 +6,7 @@
       <properties>
          <identification basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon"
                          description="{20105,4082}"
-                         name="ut_tech_gen_turret_arg_m_gatling_T042_macro"/>
+                         mk="42"/>
          <bullet class="ut_tech_gen_bullet_arg_m_gatling_T042_macro"/>
          <rotationspeed max="135.33771338316933"/>
          <reload rate="1" time="1"/>
