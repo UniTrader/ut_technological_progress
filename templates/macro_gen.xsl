@@ -80,7 +80,7 @@
                           </bullet>
                         </xsl:when>
                         <!-- Just for Debugging Purposes - Use Macro Name as Object Name -->
-                        <xsl:when test="name() = 'identification'">
+                        <!--xsl:when test="name() = 'identification'">
                           <xsl:copy>
                             <xsl:for-each select="@*">
                               <xsl:copy/>
@@ -89,7 +89,7 @@
                               <xsl:value-of select="$macroname"/>
                             </xsl:attribute>
                           </xsl:copy>
-                        </xsl:when>
+                        </xsl:when-->
                         <xsl:otherwise>
                           <xsl:copy>
                             <xsl:for-each select="@*">
