@@ -99,7 +99,7 @@
                               <xsl:attribute name="{name()}">
                                 <xsl:choose>
                                   <!-- Expotential Progression (0 - 200 % of previous level value) if Progression Value is between 0 and 2 (but not exactly 1), otherwise Linear progression with each level (progress value is added per level-->
-                                  <xsl:when test=". &gt; 0 and . &lt; 2 and . != 1">
+                                  <xsl:when test="floor(.) != . ">
                                     <!--                                            base Value                                          -> Power of -> Progression multi  -> current level minus start level of definition (so you set the value at level_min) -->
                                     <xsl:value-of select="saxon:evaluate(concat ('../../@' , name())) * math:power(number(.), ( $level - ../../../../@level_min ) )"/>
                                   </xsl:when>
