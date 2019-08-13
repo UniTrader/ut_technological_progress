@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<diff>
+  <add sel="//ware[@id='turret_arg_m_gatling_02_mk1']/component[1]" pos="after">
+    <component ref="ut_tech_gen_turret_arg_m_gatling_T001_macro" amount="1" />
+    <component ref="ut_tech_gen_turret_arg_m_gatling_T002_macro" amount="1" />
+    <component ref="ut_tech_gen_turret_arg_m_gatling_T003_macro" amount="1" />
+    <component ref="ut_tech_gen_turret_arg_m_gatling_T004_macro" amount="1" />
+    <component ref="ut_tech_gen_turret_arg_m_gatling_T005_macro" amount="1" />
+  </add>
+</diff>
