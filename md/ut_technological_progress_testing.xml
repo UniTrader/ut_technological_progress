@@ -1,4 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<do_all exact="$Ships.count" counter="$s">
+                            <set_value name="$loadlist" exact="[macro.weapon_khp_s_mk1_macro, macro.weapon_khp_m_mk1_macro, macro.turret_khp_m_mk1_macro, macro.turret_khp_l_mk1_macro]" />
+                            <append_to_list name="$loadlist" exact="macro.thruster_gen_s_allround_01_mk3_macro" />
+                            <append_to_list name="$loadlist" exact="macro.thruster_gen_m_allround_01_mk3_macro" />
+                            <append_to_list name="$loadlist" exact="macro.thruster_gen_l_allround_01_mk3_macro" />
+                            <append_to_list name="$loadlist" exact="macro.thruster_gen_xl_allround_01_mk3_macro" />
+                            <set_value name="$Victim" exact="$Ships.{$s}" />
+                            <find_object_component groupname="$keeping" object="$Victim" recursive="true" multiple="true">
+                                <match_any>
+                                    <match class="[class.turret, class.weapon]" negate="true" />
+                                    <match integrated="true" />
+                                    <match integrated="false" />
+                                </match_any>
+                            </find_object_component>
+                            <do_all exact="$keeping.count" counter="$i">
+                                <append_to_list name="$loadlist" exact="$keeping.{$i}.macro" />
+                            </do_all>
+                            <generate_loadout result="$loadout" macro="$Victim.macro" macros="$loadlist" level="1" />
+                            <apply_loadout object="$Victim" loadout="$loadout.{1}" />
+                            <remove_value name="$keeping" />
+                            <remove_value name="$loadout" />
+                            <remove_value name="$Victim" />
+                        </do_all>
+                        -->
 <mdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="UT_Technological_Progress_Test" xsi:noNamespaceSchemaLocation="http://utnas/~unitrader/XRebirthxsds/md.xsd">
   <cues>
     <cue name="Init">
@@ -11,28 +36,41 @@
             <cue_is_complete cue="md.Setup.Start"/>
           </conditions>
           <actions>
-        <do_all exact="100" counter="$i">
-          <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" macros="[macro.{'ut_tech_gen_turret_arg_m_gatling_T' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}]" repeat="true"/>
-          <debug_text filter="general" text="$loadout"/>
-          <debug_text filter="general" text="$loadout.wares.list"/>
-          <create_ship name="$Testship" zone="player.zone" macro="macro.ship_arg_xl_carrier_01_b_macro">
-            <owner exact="faction.player"/>
-            <pilot macro="character_boron_generic_01_macro">
-              <owner exact=" faction.player"/>
-              <skills>
-                <skill type="boarding" exact="15"/>
-                <skill type="engineering" exact="15"/>
-                <skill type="management" exact="15"/>
-                <skill type="morale" exact="15"/>
-              </skills>
-            </pilot>
-            <loadout loadout="$loadout">
-              <level exact="1"/>
-            </loadout>
-            <safepos object="player.container" radius="5km"/>
-          </create_ship>
-          <set_object_name object="$Testship" name="'TEST ' + $i"/>
-        </do_all>
+            <do_all exact="10" counter="$i">
+              <create_loadout result="$loadoutE"/>
+                <!--macros>
+                  <turret macro="'ut_tech_gen_turret_arg_m_gatling_T' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'" optional="false"/>
+                  <turret macro="turret_arg_m_laser_01_mk1_macro" optional="false"/>
+                </macros>
+                <groups>
+                  <turrets macro="'ut_tech_gen_turret_arg_m_gatling_T' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'" exact="100" percent="true" optional="false"/>
+                  <turrets macro="turret_arg_m_laser_01_mk1_macro" exact="100" percent="true" optional="false"/>
+                </groups>
+              </create_loadout-->
+              <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="false"
+			  macros="[macro.thruster_gen_xl_allround_01_mk1_macro,macro.engine_arg_xl_allround_01_mk1_macro,macro.turret_arg_m_laser_01_mk1_macro,macro.turret_tel_l_laser_01_mk1_macro,macro.turret_arg_m_shotgun_02_mk1_macro,macro.turret_arg_m_plasma_02_mk1_macro,macro.turret_arg_m_gatling_02_mk1_macro]"/>
+			  <!--macro.{'ut_tech_gen_turret_arg_m_gatling_T' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}, level="1" requireblueprints="false" -->
+              <debug_text filter="general" text="$loadout"/>
+              <debug_text filter="general" text="$remain"/>
+              <debug_text filter="general" text="$used"/>
+              <create_ship name="$Testship" zone="player.zone" macro="macro.ship_arg_xl_carrier_01_b_macro">
+                <owner exact="faction.player"/>
+                <pilot macro="character_boron_generic_01_macro">
+                  <owner exact=" faction.player"/>
+                  <skills>
+                    <skill type="boarding" exact="15"/>
+                    <skill type="engineering" exact="15"/>
+                    <skill type="management" exact="15"/>
+                    <skill type="morale" exact="15"/>
+                  </skills>
+                </pilot>
+                <loadout loadout="$loadout">
+                  <level exact="1"/>
+                </loadout>
+                <safepos object="player.container" radius="5km"/>
+              </create_ship>
+              <set_object_name object="$Testship" name="'TEST ' + $i"/>
+            </do_all>
           </actions>
         </cue>
         <cue name="ChangeTestShips1" instantiate="true">
