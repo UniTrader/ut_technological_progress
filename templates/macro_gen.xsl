@@ -20,7 +20,7 @@
               <xsl:value-of select="./@size"/>
               <xsl:text>_</xsl:text>
               <xsl:value-of select="./@type"/>
-              <xsl:text>_T</xsl:text>
+              <xsl:text>_t</xsl:text>
               <xsl:number value="$level" format="001"/>
               <xsl:text>_macro</xsl:text>
             </xsl:variable>
@@ -48,7 +48,7 @@
                       <xsl:value-of select="./@size"/>
                       <xsl:text>_</xsl:text>
                       <xsl:value-of select="./@type"/>
-                      <xsl:text>_T</xsl:text>
+                      <xsl:text>_t</xsl:text>
                       <xsl:text>001</xsl:text>
                       <xsl:text>_macro</xsl:text>
                     </xsl:attribute>
@@ -73,7 +73,7 @@
                               <xsl:value-of select="../../@size"/>
                               <xsl:text>_</xsl:text>
                               <xsl:value-of select="../../@type"/>
-                              <xsl:text>_T</xsl:text>
+                              <xsl:text>_t</xsl:text>
                               <xsl:number value="$level" format="001"/>
                               <xsl:text>_macro</xsl:text>
                             </xsl:attribute>
