@@ -11,7 +11,6 @@
       </primary>
     </production>
     <component ref="ut_tech_gen_turret_arg_m_gatling_t001_macro" amount="1" />
-    <restriction licence="militaryequipment" />
     <use threshold="0.15" />
     <owner faction="alliance" />
     <owner faction="antigone" />
@@ -27,7 +26,6 @@
       </primary>
     </production>
     <component ref="ut_tech_gen_turret_arg_m_gatling_t002_macro" amount="1" />
-    <restriction licence="militaryequipment" />
     <use threshold="0.15" />
     <owner faction="alliance" />
     <owner faction="antigone" />
@@ -43,7 +41,6 @@
       </primary>
     </production>
     <component ref="ut_tech_gen_turret_arg_m_gatling_t003_macro" amount="1" />
-    <restriction licence="militaryequipment" />
     <use threshold="0.15" />
     <owner faction="alliance" />
     <owner faction="antigone" />
