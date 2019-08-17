@@ -102,44 +102,116 @@
     <level>99</level>
     <level>100</level>
   </levels>
+  <index type="macros">
+    <entry name="ut_tech_turret_arg_m_gatling_tlow_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_tlow_macro"/>
+    <entry name="ut_tech_turret_arg_m_gatling_tmed_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_tmed_macro"/>
+    <entry name="ut_tech_turret_arg_m_gatling_thig_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_thig_macro"/>
+    <entry name="ut_tech_turret_arg_m_gatling_texp_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_texp_macro"/>
+  </index>
+  <wares>
+    <ware id="ut_tech_turret_arg_m_gatling_low_macro" name="{20105,4084} low" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+      <price min="24665" average="27406" max="30147"/>
+      <production time="10" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="advancedelectronics" amount="1"/>
+          <ware ware="energycells" amount="5"/>
+          <ware ware="turretcomponents" amount="12"/>
+        </primary>
+      </production>
+      <component ref="ut_tech_turret_arg_m_gatling_low_macro" amount="1"/>
+      <use threshold="0.15"/>
+      <owner faction="alliance"/>
+      <owner faction="antigone"/>
+      <owner faction="argon"/>
+    </ware>
+    <ware id="ut_tech_turret_arg_m_gatling_med_macro" name="{20105,4084} med" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+      <price min="24665" average="27406" max="30147"/>
+      <production time="10" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="advancedelectronics" amount="1"/>
+          <ware ware="energycells" amount="5"/>
+          <ware ware="turretcomponents" amount="12"/>
+        </primary>
+      </production>
+      <component ref="ut_tech_turret_arg_m_gatling_med_macro" amount="1"/>
+      <use threshold="0.15"/>
+      <owner faction="alliance"/>
+      <owner faction="antigone"/>
+      <owner faction="argon"/>
+    </ware>
+    <ware id="ut_tech_turret_arg_m_gatling_hig_macro" name="{20105,4084} hig" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+      <price min="24665" average="27406" max="30147"/>
+      <production time="10" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="advancedelectronics" amount="1"/>
+          <ware ware="energycells" amount="5"/>
+          <ware ware="turretcomponents" amount="12"/>
+        </primary>
+      </production>
+      <component ref="ut_tech_turret_arg_m_gatling_hig_macro" amount="1"/>
+      <use threshold="0.15"/>
+      <owner faction="alliance"/>
+      <owner faction="antigone"/>
+      <owner faction="argon"/>
+    </ware>
+    <ware id="ut_tech_turret_arg_m_gatling_exp_macro" name="{20105,4084} exp" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+      <price min="24665" average="27406" max="30147"/>
+      <production time="10" amount="1" method="default" name="{20206,101}">
+        <primary>
+          <ware ware="advancedelectronics" amount="1"/>
+          <ware ware="energycells" amount="5"/>
+          <ware ware="turretcomponents" amount="12"/>
+        </primary>
+      </production>
+      <component ref="ut_tech_turret_arg_m_gatling_exp_macro" amount="1"/>
+      <use threshold="0.15"/>
+      <owner faction="alliance"/>
+      <owner faction="antigone"/>
+      <owner faction="argon"/>
+    </ware>
+  </wares>
   <technology class="turret" faction="arg" size="m" type="gatling" level_min="1" level_max="100">
-    <component ref="turret_arg_m_gatling_02_mk1"/>
-    <properties>
-      <identification basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon" description="{20105,4082}" mk="1">
-        <progression mk="1"/>
-      </identification>
-      <bullet>
-        <prefix_parts class="bullet" faction="arg" size="m" type="gatling"/>
-      </bullet>
-      <rotationspeed max="90">
-        <progression max="1.01"/>
-      </rotationspeed>
-      <reload rate="1" time="1"/>
-      <hull threshold="0.2" integrated="1"/>
-    </properties>
+    <macro>
+      <component ref="ut_tech_turret_arg_m_gatling_turret_comp"/>
+      <properties>
+        <identification basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon" description="{20105,4082}" mk="1">
+          <progression mk="1"/>
+        </identification>
+        <bullet>
+          <prefix_parts class="bullet" faction="arg" size="m" type="gatling"/>
+        </bullet>
+        <rotationspeed max="90">
+          <progression max="1.01"/>
+        </rotationspeed>
+        <reload rate="1" time="1"/>
+        <hull threshold="0.2" integrated="1"/>
+      </properties>
+    </macro>
   </technology>
   <technology class="bullet" faction="arg" size="m" type="gatling" level_min="1" level_max="100">
-    <component ref="bullet_gen_m_gatling_01_mk1"/>
-    <properties>
-      <ammunition value="21" reload="1"/>
-      <bullet speed="1920" lifetime="2.5" amount="1" barrelamount="1" icon="weapon_gatling_mk1" timediff="0.025" angle="0.40" maxhits="2" ricochet="0.01" restitution="0.3" scale="0" attach="0">
-        <progression speed="1.02" lifetime="0.99" angle="0.99"/>
-      </bullet>
-      <heat value="60">
-        <progression value="0.99"/>
-      </heat>
-      <reload rate="7">
-        <progression rate="1.01"/>
-      </reload>
-      <damage value="12" repair="0">
-        <progression value="1.01"/>
-      </damage>
-      <effects>
-        <impact ref="impact_gen_m_gatling_01_mk1"/>
-        <launch ref="muzzle_gen_m_gatling_01_mk1"/>
-      </effects>
-      <weapon system="weapon_standard"/>
-    </properties>
+    <macro>
+      <component ref="bullet_gen_m_gatling_01_mk1"/>
+      <properties>
+        <ammunition value="21" reload="1"/>
+        <bullet speed="1920" lifetime="2.5" amount="1" barrelamount="1" icon="weapon_gatling_mk1" timediff="0.025" angle="0.40" maxhits="2" ricochet="0.01" restitution="0.3" scale="0" attach="0">
+          <progression speed="1.02" lifetime="0.99" angle="0.99"/>
+        </bullet>
+        <heat value="60">
+          <progression value="0.99"/>
+        </heat>
+        <reload rate="7">
+          <progression rate="1.01"/>
+        </reload>
+        <damage value="12" repair="0">
+          <progression value="1.01"/>
+        </damage>
+        <effects>
+          <impact ref="impact_gen_m_gatling_01_mk1"/>
+          <launch ref="muzzle_gen_m_gatling_01_mk1"/>
+        </effects>
+        <weapon system="weapon_standard"/>
+      </properties>
+    </macro>
   </technology>
 </technologies>
 <!--
