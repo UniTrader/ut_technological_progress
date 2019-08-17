@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<components>
+	<component name="ut_tech_turret_arg_m_gatling_base_comp" class="turret">
+		<source geometry="assets\props\WeaponSystems\heavy\turret_arg_m_gatling_02_mk1_data"/>
+		<layers>
+			<layer>
+				<waypoints/>
+				<lights/>
+			</layer>
+		</layers>
+		<connections>
+			<connection name="container" tags="contents" value="0"/>
+			<connection name="position" tags="position" value="1"/>
+			<connection name="connnection_ship" tags="turret medium standard component hittable">
+				<offset/>
+			</connection>
+			<connection name="connection_turret" tags="tech_turret medium standard missile hittable ">
+				<offset/>
+			</connection>
+		</connections>
+	</component>
+</components>
+

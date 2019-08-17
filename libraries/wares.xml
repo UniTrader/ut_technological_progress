@@ -46,5 +46,65 @@
     <owner faction="antigone" />
     <owner faction="argon" />
   </ware>
+  <ware id="ut_tech_turret_arg_m_gatling_low_macro" name="{20105,4084} low" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+    <price min="24665" average="27406" max="30147" />
+    <production time="10" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="advancedelectronics" amount="1" />
+        <ware ware="energycells" amount="5" />
+        <ware ware="turretcomponents" amount="12" />
+      </primary>
+    </production>
+    <component ref="ut_tech_turret_arg_m_gatling_low_macro" amount="1" />
+    <use threshold="0.15" />
+    <owner faction="alliance" />
+    <owner faction="antigone" />
+    <owner faction="argon" />
+  </ware>
+  <ware id="ut_tech_turret_arg_m_gatling_med_macro" name="{20105,4084} med" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+    <price min="24665" average="27406" max="30147" />
+    <production time="10" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="advancedelectronics" amount="1" />
+        <ware ware="energycells" amount="5" />
+        <ware ware="turretcomponents" amount="12" />
+      </primary>
+    </production>
+    <component ref="ut_tech_turret_arg_m_gatling_med_macro" amount="1" />
+    <use threshold="0.15" />
+    <owner faction="alliance" />
+    <owner faction="antigone" />
+    <owner faction="argon" />
+  </ware>
+  <ware id="ut_tech_turret_arg_m_gatling_hig_macro" name="{20105,4084} hig" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+    <price min="24665" average="27406" max="30147" />
+    <production time="10" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="advancedelectronics" amount="1" />
+        <ware ware="energycells" amount="5" />
+        <ware ware="turretcomponents" amount="12" />
+      </primary>
+    </production>
+    <component ref="ut_tech_turret_arg_m_gatling_hig_macro" amount="1" />
+    <use threshold="0.15" />
+    <owner faction="alliance" />
+    <owner faction="antigone" />
+    <owner faction="argon" />
+  </ware>
+  <ware id="ut_tech_turret_arg_m_gatling_exp_macro" name="{20105,4084} exp" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+    <price min="24665" average="27406" max="30147" />
+    <production time="10" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="advancedelectronics" amount="1" />
+        <ware ware="energycells" amount="5" />
+        <ware ware="turretcomponents" amount="12" />
+      </primary>
+    </production>
+    <component ref="ut_tech_turret_arg_m_gatling_exp_macro" amount="1" />
+    <use threshold="0.15" />
+    <owner faction="alliance" />
+    <owner faction="antigone" />
+    <owner faction="argon" />
+  </ware>
   </add>
 </diff>
