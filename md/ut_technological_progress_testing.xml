@@ -52,18 +52,18 @@
 			  <create_loadout result="$loadout_mount">
 			    <macros>
 			      <!-- This line is valid but uses a method not accounted for in the XSD files. Comment out/ignore for Validation if you want (but comment back in afterwards) -->
-			      <turret macro="{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}" optional="false" path="../connection_turret"/>
+			      <turret macro="{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}" optional="false"/>
 			    </macros>
 			  </create_loadout>
 			  <do_if value="$i == 1">
 			  			  <create_loadout result="$loadout_mount">
 			    <macros>
 			      <!-- This line is valid but uses a method not accounted for in the XSD files. Comment out/ignore for Validation if you want (but comment back in afterwards) -->
-			      <turret macro="ut_tech_gen_turret_arg_m_gatling_t001_macro" optional="false" path="connection_turret"/>
+			      <turret macro="ut_tech_gen_turret_arg_m_gatling_t001_macro" optional="false"/>
 			    </macros>
 			  </create_loadout>
 			  </do_if>
-			  <apply_loadout object="$mounts.{1}" loadout="$loadout_mount" flags="add"/>
+			  <apply_loadout object="$mounts.{1}" loadout="$loadout_mount" flags="add" />
               <debug_text filter="general" text="$loadout_mount"/>
               <debug_text filter="general" text="$loadout_mount.wares.list"/>
 			  <debug_text filter="general" text="'======='"/>
