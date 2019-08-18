@@ -46,9 +46,14 @@
               <set_object_name object="$Testship" name="'TEST ' + $i"/>
 			  <apply_loadout object="$Testship" loadout="$loadout.{1}"/>
 			  <find_object_component name="$mounts" object="$Testship" macro="macro.ut_tech_turret_arg_m_gatling_exp_macro" multiple="true"/>
-			  <debug_text filter="general" text="'found %1 turret mounts'.[$mounts.count]"/>
-			  <generate_loadout result="$loadout_mount" macro="$mounts.{1}.macro" macros="[macro.{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}]" level="-1" variation="0"/>
+			  <debug_text filter="general" text="'found %1 turret mounts:/n%2'.[$mounts.count,mounts.{1}.macro]"/>
+			  <generate_loadout result="$loadout_mount" macro="$mounts.{1}.macro" macros="[macro.{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}]" level="-1" variation="0" remaining="$remain" used="$used"/>
 			  <apply_loadout object="$mounts.{1}" loadout="$loadout_mount.{1}"/>
+			  <debug_text filter="general" text="'======='"/>
+              <debug_text filter="general" text="$loadout_mount"/>
+              <debug_text filter="general" text="$remain"/>
+              <debug_text filter="general" text="$used"/>
+			  <debug_text filter="general" text="'======='"/>
 			  <debug_text filter="general" text="'======='"/>
             </do_all>
           </actions>
