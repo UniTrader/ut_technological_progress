@@ -14,7 +14,7 @@
 			<connection name="connnection_ship" tags="turret medium standard component hittable">
 				<offset/>
 			</connection>
-			<connection name="connection_turret" tags="tech_turret medium standard missile hittable ">
+			<connection name="connection_turret" tags="turret medium standard missile hittable progressing">
 				<offset/>
 			</connection>
 		</connections>
