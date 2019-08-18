@@ -48,7 +48,13 @@
 			  <find_object_component name="$mounts" object="$Testship" macro="macro.ut_tech_turret_arg_m_gatling_exp_macro" multiple="true"/>
 			  <debug_text filter="general" text="'======='"/>
 			  <debug_text filter="general" text="'found %1 turret mounts:\n%2'.[$mounts.count,$mounts.{1}.macro]"/>
-			  <generate_loadout result="$loadout_mount" macro="$mounts.{1}.macro" macros="[macro.{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}]" level="-1" variation="0" remaining="$remain" used="$used"/>
+			  <!--generate_loadout result="$loadout_mount" macro="$mounts.{1}.macro" macros="[macro.{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}]" level="-1" variation="0" remaining="$remain" used="$used"/-->
+			  <create_loadout result="$loadout_mount">
+			    <macros>
+			      <!-- This line is valid but uses a method not accounted for in the XSD files. Comment out/ignore for Validation if you want (but comment back in afterwards) -->
+			      <turret macro="{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}" optional="false" path="../connection_turret"/>
+			    </macros>
+			  </create_loadout>
 			  <apply_loadout object="$mounts.{1}" loadout="$loadout_mount.{1}" flags="add"/>
               <debug_text filter="general" text="$loadout_mount"/>
               <debug_text filter="general" text="$remain"/>
