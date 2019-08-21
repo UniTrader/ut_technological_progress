@@ -103,10 +103,10 @@
     <level>100</level>
   </levels>
   <index type="macros">
-    <entry name="ut_tech_turret_arg_m_gatling_tlow_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_tlow_macro"/>
-    <entry name="ut_tech_turret_arg_m_gatling_tmed_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_tmed_macro"/>
-    <entry name="ut_tech_turret_arg_m_gatling_thig_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_thig_macro"/>
-    <entry name="ut_tech_turret_arg_m_gatling_texp_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_texp_macro"/>
+    <entry name="ut_tech_turret_arg_m_gatling_low_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_low_macro"/>
+    <entry name="ut_tech_turret_arg_m_gatling_med_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_med_macro"/>
+    <entry name="ut_tech_turret_arg_m_gatling_hig_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_hig_macro"/>
+    <entry name="ut_tech_turret_arg_m_gatling_exp_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_exp_macro"/>
     <entry name="ut_tech_loadout_bitch_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_loadout_bitch_macro"/>
   </index>
   <wares>
