@@ -58,7 +58,7 @@
 			  </do_if-->
 			  <apply_loadout object="$mounts.{1}" loadout="$loadout_mount.{1}" flags="add" />
               <debug_text filter="general" text="'Loadout Remain Used"/>
-              <debug_text filter="general" text="$loadout"/>
+              <debug_text filter="general" text="$loadout_mount"/>
               <debug_text filter="general" text="$remain"/>
               <debug_text filter="general" text="$used"/>
 			  <find_object_component name="$turrets" object="$Testship" macro="macro.{'ut_tech_gen_turret_arg_m_gatling_t' + ( if $i gt 99 then '' else if $i gt 9 then '0' else '00' ) + $i + '_macro'}" multiple="true"/>
