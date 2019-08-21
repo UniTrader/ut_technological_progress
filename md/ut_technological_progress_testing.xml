@@ -57,7 +57,7 @@
 			  </create_loadout>
 			  </do_if-->
 			  <apply_loadout object="$mounts.{1}" loadout="$loadout_mount.{1}" flags="add" />
-              <debug_text filter="general" text="'Loadout Remain Used"/>
+              <debug_text filter="general" text="'Loadout Remain Used'"/>
               <debug_text filter="general" text="$loadout_mount"/>
               <debug_text filter="general" text="$remain"/>
               <debug_text filter="general" text="$used"/>
