@@ -107,6 +107,7 @@
     <entry name="ut_tech_turret_arg_m_gatling_tmed_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_tmed_macro"/>
     <entry name="ut_tech_turret_arg_m_gatling_thig_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_thig_macro"/>
     <entry name="ut_tech_turret_arg_m_gatling_texp_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_texp_macro"/>
+    <entry name="ut_tech_loadout_bitch_macro" value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_loadout_bitch_macro"/>
   </index>
   <wares>
     <ware id="ut_tech_turret_arg_m_gatling_low_macro" name="{20105,4084} low" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">

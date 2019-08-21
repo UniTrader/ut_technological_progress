@@ -4,4 +4,6 @@
           value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_base_comp"/>
    <entry name="ut_tech_turret_arg_m_gatling_turret_comp"
           value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_turret_arg_m_gatling_turret_comp"/>
+   <entry name="ut_tech_loadout_bitch_comp"
+          value="extensions\ut_technological_progress\assets\turret_attachment\ut_tech_loadout_bitch_comp"/>
 </index>
