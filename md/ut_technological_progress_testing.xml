@@ -56,7 +56,7 @@
         <debug_text filter="general" text="$loadout_placeholder"/>
         <debug_text filter="general" text="$remain"/>
         <debug_text filter="general" text="$used"/>
-        <debug_text filter="general" text="$loadout.{1}.wares.list"/>
+        <debug_text filter="general" text="$loadout_placeholder.{1}.wares.list"/>
         
 			  <apply_loadout object="$Testship" loadout="$loadout_placeholder.{1}" flags="add"/>
 			  </do_if>
