@@ -12,8 +12,9 @@
           </conditions>
           <actions>
             <do_all exact="10" counter="$i">
-              <do_while value="$i gt 3">
-                <set_value name="$i" exact="3" operation="subtract"/>
+              <set_value name="$level" exact="$i"/>
+              <do_while value="$level gt 3">
+                <set_value name="$level" exact="3" operation="subtract"/>
               </do_while>
               <create_loadout result="$loadoutE"/>
               <debug_text filter="general" text="$loadout"/>
@@ -74,7 +75,7 @@
 			  <do_if value="$i gt 3">
               <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="true" level="-1" variation="0"
 			  macros="[macro.ut_tech_turret_arg_m_gatling_exp_macro]"/>
-        <debug_text filter="general" text="'======= add level ' + $i + ' turret ====='"/>
+        <debug_text filter="general" text="'======= add level ' + $level + ' turret ====='"/>
         <debug_text filter="general" text="$loadout"/>
         <debug_text filter="general" text="$remain"/>
         <debug_text filter="general" text="$used"/>
