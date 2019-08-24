@@ -344,7 +344,7 @@
 					</part>
 				</parts>
 			</connection>
-			<connection name="con_gatling_turret" tags="turret medium standard component hittable progressing">
+			<connection name="con_gatling_turret" tags="turret medium standard component hittable">
 				<offset/>
 			</connection>
 		</connections>
