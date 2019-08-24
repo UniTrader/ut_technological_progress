@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<macros>
+   <macro class="turret" name="ut_tech_turret_m_none_macro">
+      <component ref="ut_tech_turret_arg_m_gatling_turret_comp"/>
+      <properties>
+         <identification basename="{20105,4081}" shortname="{20105,4085}" makerrace="argon"
+                         description="{20105,4082}"
+                         mk="33"/>
+         <rotationspeed max="123.74466106779876"/>
+         <reload rate="1" time="1"/>
+         <hull threshold="0.2" integrated="1"/>
+      </properties>
+   </macro>
+</macros>

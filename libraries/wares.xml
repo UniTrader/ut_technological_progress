@@ -12,9 +12,7 @@
     </production>
     <component ref="ut_tech_gen_turret_arg_m_gatling_t001_macro" amount="1" />
     <use threshold="0.15" />
-    <owner faction="alliance" />
-    <owner faction="antigone" />
-    <owner faction="argon" />
+    <owner faction="visitor" />
   </ware>
   <ware id="ut_tech_gen_turret_arg_m_gatling_t002" name="{20105,4084}" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
     <price min="24665" average="27406" max="30147" />
@@ -27,9 +25,7 @@
     </production>
     <component ref="ut_tech_gen_turret_arg_m_gatling_t002_macro" amount="1" />
     <use threshold="0.15" />
-    <owner faction="alliance" />
-    <owner faction="antigone" />
-    <owner faction="argon" />
+    <owner faction="visitor" />
   </ware>
   <ware id="ut_tech_gen_turret_arg_m_gatling_t003" name="{20105,4084}" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
     <price min="24665" average="27406" max="30147" />
@@ -42,9 +38,18 @@
     </production>
     <component ref="ut_tech_gen_turret_arg_m_gatling_t003_macro" amount="1" />
     <use threshold="0.15" />
-    <owner faction="alliance" />
-    <owner faction="antigone" />
-    <owner faction="argon" />
+    <owner faction="visitor" />
+  </ware>
+  <ware id="ut_tech_turret_arg_m_gatling_none_macro" name="{20105,4084} none" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+    <price min="0" average="0" max="0" />
+    <production time="10" amount="1" method="default" name="{20206,101}">
+      <primary>
+        <ware ware="energycells" amount="1" />
+      </primary>
+    </production>
+    <component ref="ut_tech_turret_arg_m_gatling_none_macro" amount="1" />
+    <use threshold="0.15" />
+    <owner faction="visitor" />
   </ware>
   <ware id="ut_tech_turret_arg_m_gatling_low_macro" name="{20105,4084} low" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
     <price min="24665" average="27406" max="30147" />
