@@ -60,7 +60,7 @@
 			  
 			  <do_if value="$i gt 2">
 			  <!-- Replacing one Placeholder after another with the real final Turret -->
-              <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="true" level="-1" variation="0" flags="turrets turretgroups"
+              <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used"repeat="false" level="1" variation="0" flags="turrets turretgroups"
 			  macros="[macro.ut_tech_turret_arg_m_gatling_exp_macro]"/>
         <debug_text filter="general" text="'======= remove EXP turret ====='"/>
         <debug_text filter="general" text="$loadout"/>
@@ -70,7 +70,7 @@
 			  </do_if>
 			  
 			  <do_if value="$i gt 3">
-              <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="true" level="-1" variation="0" flags="turrets turretgroups"
+              <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used"repeat="false" level="1" variation="0" flags="turrets turretgroups"
 			  macros="[macro.ut_tech_turret_arg_m_gatling_exp_macro]"/>
         <debug_text filter="general" text="'======= add level ' + $level + ' turret ====='"/>
         <debug_text filter="general" text="$loadout"/>
@@ -86,7 +86,11 @@
 			  
 			  <!-- find the installed turrets -->
 			  <find_object_component name="$turrets" object="$Testship" class="class.turret" multiple="true"/>
-              <debug_text filter="general" text="$turrets"/>
+			  <set_value name="$debug_text" exact="''"/>
+			  <do_all exact="$turrets.count" counter="$j">
+			    <set_value name="$debug_text" exact="$debug_text + $turrets.{$j}.name"/>
+			  </do_all>
+              <debug_text filter="general" text="$debug_text"/>
 			  <debug_text filter="general" text="'================================='"/>
             </do_all>
           </actions>
