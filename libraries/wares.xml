@@ -40,14 +40,14 @@
     <use threshold="0.15" />
     <owner faction="visitor" />
   </ware>
-  <ware id="ut_tech_turret_arg_m_gatling_none_macro" name="{20105,4084} none" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
+  <ware id="ut_tech_turret_m_none_macro" name="{20105,4084} none" description="{20105,4082}" group="turrets" transport="equipment" volume="1" tags="equipment turret">
     <price min="0" average="0" max="0" />
     <production time="10" amount="1" method="default" name="{20206,101}">
       <primary>
         <ware ware="energycells" amount="1" />
       </primary>
     </production>
-    <component ref="ut_tech_turret_arg_m_gatling_none_macro" amount="1" />
+    <component ref="ut_tech_turret_m_none_macro" amount="1" />
     <use threshold="0.15" />
     <owner faction="visitor" />
   </ware>
