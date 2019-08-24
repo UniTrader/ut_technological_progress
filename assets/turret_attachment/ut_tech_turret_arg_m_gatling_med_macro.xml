@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <macros>
    <macro class="turret" name="ut_tech_turret_arg_m_gatling_med_macro">
-      <component ref="ut_tech_turret_arg_m_gatling_base_comp"/>
+      <component ref="ut_tech_turret_arg_m_gatling_turret_comp"/>
       <properties>
          <identification basename="{20105,4081} med" shortname="{20105,4085}" makerrace="argon"
                          description="{20105,4082}"
