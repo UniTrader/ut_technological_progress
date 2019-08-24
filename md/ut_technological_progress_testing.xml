@@ -49,7 +49,7 @@
 			  
 			  <do_if value="$i gt 1">
 			  <!-- Filling all Empty Slots with None-Placeholders -->
-            <generate_loadout result="$loadout_placeholder" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="true" level="-1" variation="0" flags="turrets"
+            <generate_loadout result="$loadout_placeholder" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="false" level="1" variation="0" flags="turrets"
 			  macros="[macro.ut_tech_turret_m_none_macro]"/>
         <debug_text filter="general" text="'======= Filling Slots with none ====='"/>
         <debug_text filter="general" text="$loadout_placeholder"/>
