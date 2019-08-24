@@ -17,9 +17,6 @@
                 <set_value name="$level" exact="3" operation="subtract"/>
               </do_while>
               <create_loadout result="$loadoutE"/>
-              <debug_text filter="general" text="$loadout"/>
-              <debug_text filter="general" text="$remain"/>
-              <debug_text filter="general" text="$used"/>
               <create_ship name="$Testship" zone="player.zone" macro="macro.ship_arg_xl_carrier_01_b_macro">
                 <owner exact="faction.player"/>
                 <pilot macro="character_boron_generic_01_macro">
@@ -90,7 +87,7 @@
 			  <!-- find the installed turrets -->
 			  <find_object_component name="$turrets" object="$Testship" class="class.turret" multiple="true"/>
               <debug_text filter="general" text="$turrets"/>
-			  <debug_text filter="general" text="'======='"/>
+			  <debug_text filter="general" text="'================================='"/>
             </do_all>
           </actions>
         </cue>
