@@ -13,13 +13,13 @@
       </properties>
       <connections>
       <connection ref="connection_turret_t001">
-        <macro ref="ut_tech_gen_turret_arg_m_gatling_t001_macro" connection="connection_turret" />
+        <macro ref="ut_tech_gen_turret_arg_m_gatling_t001_macro" connection="connection_turret_t001" />
       </connection>
       <connection ref="connection_turret_t002">
-        <macro ref="ut_tech_gen_turret_arg_m_gatling_t002_macro" connection="connection_turret" />
+        <macro ref="ut_tech_gen_turret_arg_m_gatling_t002_macro" connection="connection_turret_t002" />
       </connection>
       <connection ref="connection_turret_t003">
-        <macro ref="ut_tech_gen_turret_arg_m_gatling_t003_macro" connection="connection_turret" />
+        <macro ref="ut_tech_gen_turret_arg_m_gatling_t003_macro" connection="connection_turret_t003" />
       </connection>
       </connections>
    </macro>
