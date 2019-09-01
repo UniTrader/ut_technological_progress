@@ -38,63 +38,7 @@
 			  macro.ut_tech_turret_arg_m_gatling_exp_macro,macro.ut_tech_turret_arg_m_gatling_exp_macro]"/>
 			  <apply_loadout object="$Testship" loadout="$loadout.{1}"/>
 			  
-			  
-        <debug_text filter="general" text="'==============================='"/>
-        <debug_text filter="general" text="'======= Order of Entries: ========='"/>
-        <debug_text filter="general" text="'Loadout Remain Used Wares'"/>
-        <debug_text filter="general" text="'======= Loadout from Player ====='"/>
-        <debug_text filter="general" text="$loadout"/>
-        <debug_text filter="general" text="$remain"/>
-        <debug_text filter="general" text="$used"/>
-        <debug_text filter="general" text="$loadout.{1}.wares.list"/>
-			  
-			  <set_value name="$macros" exact="[]"/>
-			  <do_all exact="$i + 13">
-			    <append_to_list name="$macros" exact="macro.ut_tech_turret_m_none_macro"/>
-			  </do_all>
-			  <!-- Filling all Empty Slots with None-Placeholders -->
-            <generate_loadout result="$loadout_placeholder" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="true" level="1" variation="0" flags="add turrets turretgroups"
-			  macros="$macros"/>
-        <debug_text filter="general" text="'======= Filling Slots with none ====='"/>
-        <debug_text filter="general" text="$loadout_placeholder"/>
-        <debug_text filter="general" text="$remain"/>
-        <debug_text filter="general" text="$used"/>
-        <debug_text filter="general" text="$loadout_placeholder.{1}.wares.list"/>
-        
-			  <apply_loadout object="$Testship" loadout="$loadout_placeholder.{1}" flags="add"/>
-			  
-			  <do_if value="$i gt 2">
-			  <!-- Replacing one Placeholder after another with the real final Turret -->
-              <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="false" level="1" variation="0" flags="turrets turretgroups"
-			  macros="[macro.ut_tech_turret_arg_m_gatling_exp_macro]"/>
-        <debug_text filter="general" text="'======= remove EXP turret ====='"/>
-        <debug_text filter="general" text="$loadout"/>
-        <debug_text filter="general" text="$remain"/>
-        <debug_text filter="general" text="$used"/>
-        <debug_text filter="general" text="$loadout.{1}.wares.list"/>
-        
-			  <apply_loadout object="$Testship" loadout="$loadout.{1}" flags="remove"/>
-			  </do_if>
-			  
-			  <do_if value="$i gt 3">
-              <generate_loadout result="$loadout" macro="macro.ship_arg_xl_carrier_01_b_macro" remaining="$remain" used="$used" repeat="false" level="1" variation="0" flags="turrets turretgroups"
-			  macros="[macro.ut_tech_turret_arg_m_gatling_exp_macro]"/>
-        <debug_text filter="general" text="'======= add level ' + $level + ' turret ====='"/>
-        <debug_text filter="general" text="$loadout"/>
-        <debug_text filter="general" text="$remain"/>
-        <debug_text filter="general" text="$used"/>
-        <debug_text filter="general" text="$loadout.{1}.wares.list"/>
-        
-			  <apply_loadout object="$Testship" loadout="$loadout.{1}" flags="add"/>
-			  </do_if>
-			  
-			  <do_if value="$i gt 4">
-			  <!-- Removing all None Placeholders -->
-			  <apply_loadout object="$Testship" loadout="$loadout_placeholder.{1}" flags="remove"/>
-			  </do_if>
-			  
-			  <!-- find the installed turrets -->
-			  <find_object_component name="$turrets" object="$Testship" class="class.turret" multiple="true"/>
+			  <find_object_component name="$turrets" object="$Testship" class="class.turret" multiple="true" recursive="true"/>
 			  <set_value name="$debug_text" exact="'$turrets.count'"/>
 			  <do_all exact="$turrets.count" counter="$j">
 			    <set_value name="$debug_text" exact="' // ' + $debug_text + $turrets.{$j}.name"/>

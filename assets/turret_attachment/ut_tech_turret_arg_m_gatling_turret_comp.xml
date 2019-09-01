@@ -347,6 +347,13 @@
 			<connection name="con_gatling_turret" tags="turret medium standard component hittable">
 				<offset/>
 			</connection>
+			
+			
+      <connection name="connection_turret" tags="turret medium standard component hittable ">
+				<offset/>
+			</connection>
+			
+			
 		</connections>
 	</component>
 </components>
