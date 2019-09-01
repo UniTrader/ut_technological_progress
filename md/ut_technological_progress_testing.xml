@@ -39,9 +39,9 @@
 			  <apply_loadout object="$Testship" loadout="$loadout.{1}"/>
 			  
 			  <find_object_component name="$turrets" object="$Testship" class="class.turret" multiple="true" recursive="true"/>
-			  <set_value name="$debug_text" exact="'$turrets.count'"/>
+			  <set_value name="$debug_text" exact="$turrets.count"/>
 			  <do_all exact="$turrets.count" counter="$j">
-			    <set_value name="$debug_text" exact="' // ' + $debug_text + $turrets.{$j}.name"/>
+			    <set_value name="$debug_text" exact="$debug_text + ' // ' + $turrets.{$j}.name"/>
 			  </do_all>
               <debug_text filter="general" text="$debug_text"/>
 			  <debug_text filter="general" text="'================================='"/>
