@@ -349,7 +349,13 @@
 			</connection>
 			
 			
-      <connection name="connection_turret" tags="turret medium standard component hittable ">
+      <connection name="connection_turret_t001" tags="turret medium standard component hittable ">
+				<offset/>
+			</connection>
+      <connection name="connection_turret_t001" tags="turret medium standard component hittable ">
+				<offset/>
+			</connection>
+      <connection name="connection_turret_t001" tags="turret medium standard component hittable ">
 				<offset/>
 			</connection>
 			
